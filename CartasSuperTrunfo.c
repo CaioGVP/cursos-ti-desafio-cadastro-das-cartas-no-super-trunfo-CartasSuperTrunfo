@@ -109,6 +109,7 @@ int main() {
 
 // Comparações
 
+/*  
     printf("*** Quais atributos entre as cartas são os melhores ***\n\n");
 
     printf("O numero de habitantes da cidade %s e maior que a da cidade %s?: %d\n", cidade_01, cidade_02, populacao_01 > populacao_02);
@@ -117,7 +118,52 @@ int main() {
     printf("A quantidade de pontos turisticos na cidade %s e maior que a da cidade %s?: %d\n", cidade_01, cidade_02, pontos_turisticos_01 > pontos_turisticos_02);
     printf("A densidade populacional cidade %s e maior que a da cidade %s?: %d\n", cidade_01, cidade_02, densidade_populacional_01 > densidade_populacional_02);    
     printf("O PIB per Capita da cidade %s e maior que a da cidade %s?: %d\n", cidade_01, cidade_02, pib_per_capita_01 > pib_per_capita_02);   
-    printf("O Super Poder da cidade %s e maior que a da cidade %s?: %d\n", cidade_01, cidade_02, super_poder_01 > super_poder_02);     
+    printf("O Super Poder da cidade %s e maior que a da cidade %s?: %d\n\n\n", cidade_01, cidade_02, super_poder_01 > super_poder_02);     
+*/
+
+
+// Estruturas de Decisão
+
+    printf("*** Atributos vencedores de casa carta ***\n\n");
+
+    if(populacao_01 > populacao_02){
+        printf("A cidade %s venceu com o atributo (Populacao)! \n", cidade_01);
+    } else{
+        printf("A cidade %s venceu com o atributo (Populacao)! \n", cidade_02);
+    }
+
+    if(area_01 > area_02){
+        printf("A cidade %s venceu com o atributo (Area)! \n", cidade_01);
+    } else{
+        printf("A cidade %s venceu com o atributo (Area)! \n", cidade_02);
+    }
+    
+    if(pib_01 > pib_02){
+        printf("A cidade %s venceu com o atributo (PIB)! \n", cidade_01);
+    } else{
+        printf("A cidade %s venceu com o atributo (PIB)! \n", cidade_02);
+    }
+
+    if(densidade_populacional_01 > densidade_populacional_02){
+        printf("A cidade %s venceu com o atributo (Densidade Populacional)! \n", cidade_01);
+    } else{
+        printf("A cidade %s venceu com o atributo (Densidade Populacional)! \n", cidade_02);
+    }    
+
+    if(pib_per_capita_01 > pib_per_capita_02){
+        printf("A cidade %s venceu com o atributo (PIB per capita)! \n", cidade_01);
+    } else{
+        printf("A cidade %s venceu com o atributo (PIB per capita)! \n", cidade_02);
+    }
+    
+    if(super_poder_01 > super_poder_02){
+        printf("A cidade %s venceu com o atributo (Super Poder)! \n", cidade_01);
+    } else{
+        printf("A cidade %s venceu com o atributo (Super Poder)! \n", cidade_02);
+    }
+
+
+
 
 
     return 0;

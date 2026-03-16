@@ -13,6 +13,8 @@ int main() {
     float pib_per_capita_01, pib_per_capita_02;
     float super_poder_01, super_poder_02;
 
+    int escolha;
+
 // Entradas
 
     printf("*** A SEGUIR INFORME OS DADOS DA CARTA '1' ***\n\n");
@@ -81,6 +83,9 @@ int main() {
 
     printf("\n\n\n");
 
+/*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+************* Código Antigo *************
 // Resultados
 
     printf("Os dados da carta '1' sao: \n\n");
@@ -109,7 +114,7 @@ int main() {
 
 // Comparações
 
-/*  
+  
     printf("*** Quais atributos entre as cartas são os melhores ***\n\n");
 
     printf("O numero de habitantes da cidade %s e maior que a da cidade %s?: %d\n", cidade_01, cidade_02, populacao_01 > populacao_02);
@@ -119,7 +124,7 @@ int main() {
     printf("A densidade populacional cidade %s e maior que a da cidade %s?: %d\n", cidade_01, cidade_02, densidade_populacional_01 > densidade_populacional_02);    
     printf("O PIB per Capita da cidade %s e maior que a da cidade %s?: %d\n", cidade_01, cidade_02, pib_per_capita_01 > pib_per_capita_02);   
     printf("O Super Poder da cidade %s e maior que a da cidade %s?: %d\n\n\n", cidade_01, cidade_02, super_poder_01 > super_poder_02);     
-*/
+
 
 
 // Estruturas de Decisão
@@ -161,11 +166,129 @@ int main() {
     } else{
         printf("A cidade %s venceu com o atributo (Super Poder)! \n", cidade_02);
     }
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
 
 
+    printf("Escolha um atributo para ser comparado: \n");
+    printf("1. Populacao\n");
+    printf("2. Area\n");
+    printf("3. PIB\n");
+    printf("4. Pontos Turisticos\n");
+    printf("5. Densidade Demografica\n");
+    printf("6. PIB per Capita\n");
+    printf("7. Super Poder\n");
+    scanf("%d", &escolha);
 
+    printf("\n\n");
 
+    switch (escolha)
+    {
+    case 1:
+        printf("Estado: %s Vs %s\n", cidade_01, cidade_02);
+        printf("Atributo escolhido: Populacao\n");
+        printf("| %s = %d | Vs | %d = %s |\n", cidade_01, populacao_01, populacao_02, cidade_02);
+        if (populacao_01 > populacao_02)
+        {
+            printf("### %s venceu! ###\n", cidade_01);
+        } else if (populacao_02 < populacao_01)
+        {
+            printf("### %s venceu! ###\n", cidade_02);
+        } else {
+            printf("### Os dois empataram! ###\n");
+        }
+        break;
+    case 2:
+        printf("Estado: %s Vs %s\n", cidade_01, cidade_02);
+        printf("Atributo escolhido: Area\n");
+        printf("| %s = %.2f | Vs | %.2f = %s |\n", cidade_01, area_01, area_02, cidade_02);
+        if (area_01 > area_02)
+        {
+            printf("### %s venceu! ###\n", cidade_01);
+        } else if (area_01 < area_02)
+        {
+            printf("### %s venceu! ###\n", cidade_02);
+        } else {
+            printf("### Os dois empataram! ###\n");
+        }
+        break;
+    case 3:
+        printf("Estado: %s Vs %s\n", cidade_01, cidade_02);
+        printf("Atributo escolhido: PIB\n");
+        printf("| %s = %.2f | Vs | %.2f = %s |\n", cidade_01, pib_01, pib_02, cidade_02);
+        if (pib_01 > pib_02)
+        {
+            printf("### %s venceu! ###\n", cidade_01);
+        } else if (pib_01 < pib_02)
+        {
+            printf("### %s venceu! ###\n", cidade_02);
+        } else {
+            printf("### Os dois empataram! ###\n");
+        }
+        break;
+    case 4:
+        printf("Estado: %s Vs %s\n", cidade_01, cidade_02);
+        printf("Atributo escolhido: Pontos Turisticos\n");
+        printf("| %s = %d | Vs | %.d = %s |\n", cidade_01, pontos_turisticos_01, pontos_turisticos_02, cidade_02);
+        if (pontos_turisticos_01 > pontos_turisticos_02)
+        {
+            printf("### %s venceu! ###\n", cidade_01);
+        } else if (pontos_turisticos_01 < pontos_turisticos_02)
+        {
+            printf("### %s venceu! ###\n", cidade_02);
+        } else {
+            printf("### Os dois empataram! ###\n");
+        }
+        break;
+    case 5:
+        printf("Estado: %s Vs %s\n", cidade_01, cidade_02);
+        printf("Atributo escolhido: Densidade Demografica\n");
+        printf("| %s = %.2f | Vs | %.2f = %s |\n", cidade_01, densidade_populacional_01, densidade_populacional_02, cidade_02);
+        if (densidade_populacional_01 > densidade_populacional_02)
+        {
+            printf("### %s venceu! ###\n", cidade_01);
+        } else if (densidade_populacional_01 < densidade_populacional_02)
+        {
+            printf("### %s venceu! ###\n", cidade_02);
+        } else {
+            printf("### Os dois empataram! ###\n");
+        }
+        break;
+    case 6:
+        printf("Estado: %s Vs %s\n", cidade_01, cidade_02);
+        printf("Atributo escolhido: PIB per Capita\n");
+        printf("| %s = %.2f | Vs | %.2f = %s |\n", cidade_01, pib_per_capita_01, pib_per_capita_02, cidade_02);
+        if (pib_per_capita_01 > pib_per_capita_02)
+        {
+            printf("### %s venceu! ###\n", cidade_01);
+        } else if (pib_per_capita_01 < pib_per_capita_02)
+        {
+            printf("### %s venceu! ###\n", cidade_02);
+        } else {
+            printf("### Os dois empataram! ###\n");
+        }
+        break;
+    case 7:
+        printf("Estado: %s Vs %s\n", cidade_01, cidade_02);
+        printf("Atributo escolhido: Super Poder\n");
+        printf("| %s = %.2f | Vs | %.2f = %s |\n", cidade_01, super_poder_01, super_poder_02, cidade_02);
+        if (super_poder_01 > super_poder_02)
+        {
+            printf("### %s venceu! ##\n", cidade_01);
+        } else if (super_poder_01 < super_poder_02)
+        {
+            printf("### %s venceu! ###\n", cidade_02);
+        } else {
+            printf("### Os dois empataram! ###\n");
+        }
+        break;
 
+    default:
+            printf("Opcao invalida!\n");
+        break;
+    }
+
+    system("pause");
     return 0;
     
 }
